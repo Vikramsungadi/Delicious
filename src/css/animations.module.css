@@ -1,0 +1,134 @@
+/* COLOR ANIMATION */
+@keyframes hueAnim {
+	0% {
+		filter: hue-rotate(0deg);
+	}
+	100% {
+		filter: hue-rotate(360deg);
+	}
+}
+.colorAnim {
+	animation: hueAnim 5s ease infinite alternate-reverse;
+}
+
+/* OPACITY ANIMATION */
+@keyframes opacityAnim {
+	0% {
+		filter: opacity(100%);
+	}
+	100% {
+		filter: opacity(50%);
+	}
+}
+.opacityAnim {
+	animation: opacityAnim 3s ease infinite alternate-reverse;
+}
+
+/* SHAKE ANIMATIONS */
+@keyframes shakeAnim {
+	0% {
+		transform: rotateZ(7deg);
+	}
+	80% {
+		transform: rotateZ(0deg);
+	}
+}
+.shakeAnim {
+	transform-origin: center;
+	animation: shakeAnim 0.2s ease-in-out alternate-reverse infinite;
+}
+
+/* ROTATE ANIMATION */
+@keyframes rotateAnim {
+	0% {
+		transform: rotateZ(360deg);
+	}
+	80% {
+		transform: rotateZ(0deg);
+	}
+}
+@keyframes rotateAnim2 {
+	0% {
+		transform: rotateZ(360deg);
+	}
+	100% {
+		transform: rotateZ(0deg);
+	}
+}
+
+.rotateAnim {
+	transform-origin: center;
+	animation: rotateAnim 3s ease-in-out alternate-reverse infinite;
+}
+.rotateAnim2 {
+	transform-origin: center;
+	animation: rotateAnim2 72s linear reverse infinite;
+}
+
+/* MOVE ANIMATION */
+@keyframes moveAnim {
+	0% {
+		transform: translateX(0.8rem);
+	}
+	20% {
+		transform: translateX(1rem);
+	}
+	40% {
+		transform: translateX(1.2rem);
+	}
+	100% {
+		transform: translateX(-0.5rem);
+	}
+}
+.moveAnim {
+	transform-origin: center;
+	animation: moveAnim 1s ease-in-out alternate-reverse infinite;
+}
+
+/* COLOR BLINK ANIMATION */
+@keyframes blinkAnim {
+	0% {
+		color: var(--secondary);
+		opacity: 0.55;
+		outline: 1px solid var(--secondary);
+	}
+	100% {
+		outline: 1px solid var(--secondary);
+		color: var(--secondary);
+		opacity: 1;
+	}
+}
+
+.blinkAnim {
+	animation: blinkAnim 1s ease 2s 4 alternate-reverse;
+}
+
+@keyframes dishAnim {
+	0% {
+		opacity: 0;
+		transform: translateX(3px);
+		transform: translateY(3px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+		transform: translateY(0);
+	}
+}
+
+.dishAnim {
+	animation: dishAnim 0.5s ease;
+}
+
+@keyframes startAnim {
+	0% {
+		transform: translateY(5px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.startAnim {
+	animation: startAnim 0.4s cubic-bezier(0.02, -1.39, 1, 2.45) 10 alternate-reverse;
+}

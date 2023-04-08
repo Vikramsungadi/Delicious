@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	font-size: 62.5%;
+	font-family: "Segoe UI";
+	--primary: rgba(34, 34, 34, 1);
+	/* --secondary: #f74e4e; */
+	--secondary: rgba(252, 198, 71, 1);
+	--gray: rgba(112, 112, 112, 0.2);
+
+	--shadow-float: 0px 30px 30px 13px rgba(28, 28, 28, 1);
+}
+@layer base {
+	body {
+		@apply mx-auto flex justify-center bg-primary text-white;
+		max-width: 1440px;
+		width: 100%;
+		scroll-behavior: smooth;
+	}
+
+	h2 {
+		@apply text-2xl;
+	}
+	section {
+		margin: 10rem 0;
+	}
+	section:nth-of-type(1) {
+		margin: 7rem 0;
+	}
+	@media (max-width: 768px) {
+		section {
+			margin: 7rem 0;
+		}
+		section:nth-of-type(1) {
+			margin: 2.5rem 0 0 0;
+		}
+	}
+}
+
+#root {
+	width: 100%;
+	padding: 0 4rem;
+	overflow-x: hidden;
+}
+@media (max-width: 640px) {
+	#root {
+		padding: 0 0.8rem;
+	}
+}
+
+.process {
+	position: relative;
+}
+.process::before {
+	content: "";
+	position: absolute;
+	height: 120%;
+	translate: 2.5rem -7.5%;
+	width: 2px;
+	background-color: var(--gray);
+}
