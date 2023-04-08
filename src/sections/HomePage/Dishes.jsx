@@ -1,5 +1,5 @@
 import React, { Fragment, useRef } from "react";
-import Card from "../../components/card";
+import Card from "../../components/Card";
 import Heading from "../../components/Heading";
 import { css } from "@emotion/react";
 import { DISH_DETAILS } from "../../constants/const-dishes";

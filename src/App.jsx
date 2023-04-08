@@ -5,28 +5,6 @@ import Nav from "./sections/Nav";
 import Footer from "./sections/Footer";
 import { AnimatePresence } from "framer-motion";
 
-// const router = createBrowserRouter([
-// 	{
-// 		path: "/",
-// 		element: <Root />,
-// 		children: [
-// 			{
-// 				path: "/",
-// 				element: <Homepage />,
-// 			},
-// 			{
-// 				path: "/menu",
-// 				element: <Menu />,
-// 			},
-// 		],
-// 	},
-// ]);
-{
-	/* <AnimatePresence mode="wait">
-	<RouterProvider router={router} />
-</AnimatePresence> */
-}
-
 function App() {
 	let location = useLocation();
 	return (
