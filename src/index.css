@@ -13,11 +13,13 @@
 	--shadow-float: 0px 30px 30px 13px rgba(28, 28, 28, 1);
 }
 @layer base {
+	html {
+		scroll-behavior: smooth;
+	}
 	body {
 		@apply mx-auto flex justify-center bg-primary text-white;
 		max-width: 1440px;
 		width: 100%;
-		scroll-behavior: smooth;
 	}
 
 	h2 {

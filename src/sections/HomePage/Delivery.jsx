@@ -26,7 +26,7 @@ const Delivery = () => {
 					<h2 className="text-xl font-semibold max-lg:text-[3rem] max-xs:text-[2.5rem]">
 						Free Door Delivery upto 5km
 					</h2>
-					<div className="process mt-24 flex w-[20rem] flex-col gap-24 max-md:w-[25rem] ">
+					<div className="process mt-24 flex w-[20rem] flex-col gap-24  max-md:w-[25rem] ">
 						{details.map(({ image, desc, animation }) => (
 							<div key={desc} className=" flex items-center gap-8">
 								<div className={`image relative isolate ${beforeStyling} ${animation}`}>

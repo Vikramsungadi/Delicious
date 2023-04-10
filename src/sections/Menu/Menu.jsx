@@ -6,6 +6,7 @@ import { inputStyles, itemStyles, categoryHeading } from "./menu-styles";
 import { Lower } from "../../utils/utils";
 import { css } from "@emotion/react";
 import { motion } from "framer-motion";
+import { slideVariants } from "../../components/framer-animations";
 
 const dropdownStyles = css`
 	-ms-overflow-style: none;
@@ -18,21 +19,6 @@ const dropdownStyles = css`
 `;
 
 const Menu = () => {
-	let variants = {
-		hidden: {
-			opacity: 0,
-			x: "20vw",
-		},
-		visible: {
-			opacity: 1,
-			x: "0vw",
-			transition: {
-				type: "spring",
-				duration: 0.5,
-			},
-		},
-		// exit: { x: "-100vw" },
-	};
 	let [selectedCategory, setSelectedCategory] = useState(["biryani", "biryani family pack"]);
 	let [searchTerm, setSearchTerm] = useState("");
 	let notSearched = !searchTerm;
@@ -86,8 +72,7 @@ const Menu = () => {
 	return (
 		<motion.div
 			className="flex flex-col items-center"
-			variants={variants}
-			exit="exit"
+			variants={slideVariants}
 			initial="hidden"
 			animate="visible">
 			<Heading className="mb-10 mt-10 max-md:mb-6" title="Menu" description="We know what you love" />
@@ -96,11 +81,11 @@ const Menu = () => {
 					css={inputStyles}
 					className="w-full"
 					onInput={handleSearch}
-					placeholder="Search item"
+					placeholder="Search Dish"
 					type="text"
 					value={searchTerm}
 				/>
-				{/* DROP DOWN */}
+				{/* CATEGORIES */}
 				<div css={dropdownStyles} className="dropdowns flex w-full gap-6 self-start overflow-x-scroll ">
 					{CATEGORIES.map(({ category, image, name }) => (
 						<div
@@ -123,18 +108,19 @@ const Menu = () => {
 				</div>
 			</div>
 			{/* MENU */}
-			<div className="menu mb-16 flex  h-full max-h-[160vh]  py-10   max-md:w-[95%] max-sm:max-h-full  max-sm:px-4 max-sm:py-2 lg:w-[70%]">
+			<div className="menu mb-16 flex py-10 max-md:w-[95%] max-sm:max-h-full  max-sm:px-4 max-sm:py-2 lg:w-[70%]">
 				<ul
 					css={itemStyles}
 					className=" grid h-full grid-rows-[repeat(auto-fill,minmax(fit-content,auto))]  gap-4 gap-x-24 max-sm:flex max-sm:flex-col   ">
 					{FilteredMenu.map(({ category, items, id: categoryId }) => (
 						<Fragment key={categoryId}>
-							<li
-								key={categoryId}
+							<motion.li
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1 }}
 								className="category col-span-2 flex items-center text-lg text-primary"
 								css={categoryHeading}>
 								{category}
-							</li>
+							</motion.li>
 							{items.map(({ item, price, id }) => (
 								<li
 									key={id}
@@ -151,38 +137,3 @@ const Menu = () => {
 };
 
 export default Menu;
-
-{
-	/* <div className="dropdowns self-start">
-<div className="category flex items-center text-base max-sm:flex-col">
-	<select
-		name="categories"
-		onChange={e => updateSelectedCategory(e)}
-		css={optionStyles}
-		id="categories">
-		{CATEGORIES.map(({ category }) => (
-			<option value={category}>{Capitalize(category)}</option>
-		))}
-	</select>
-
-
-	<div className="sub-categories flex gap-24 max-md:gap-12 max-sm:mb-3 max-sm:flex-wrap max-sm:justify-between  max-sm:gap-5">
-		{sub.map(value => (
-			<div className="input-wrapper">
-				<input
-					type="radio"
-					onClick={e => updateSubCategory(e)}
-					className="mr-2 accent-secondary "
-					name="sub-category"
-					id={value}
-					value={value}
-				/>
-				<label className="max-md:text-[1.2rem]" htmlFor={value}>
-					{Capitalize(value)}
-				</label>
-			</div>
-		))}
-	</div>
-</div>
-</div> */
-}

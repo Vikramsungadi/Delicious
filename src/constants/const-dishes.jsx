@@ -1,7 +1,7 @@
 import chicken from "../assets/Dishes/chicken biryani.png";
 import burj from "../assets/Dishes/egg burj.png";
 import Mutton from "../assets/Dishes/Mutton biryani.png";
-import Naan from "../assets/Dishes/Naan.jpg";
+import Naan from "../assets/Dishes/Naan.png";
 import prawns from "../assets/Dishes/prawns.png";
 import Soup from "../assets/Dishes/Soup.png";
 import Tandoori from "../assets/Dishes/Tandoori.png";
@@ -16,10 +16,10 @@ export const DISH_DETAILS = [
 		item: "Starters",
 		image: pepper,
 	},
-	{
-		item: "Tandoori",
-		image: Tandoori,
-	},
+	// {
+	// 	item: "Tandoori",
+	// 	image: Tandoori,
+	// },
 	{
 		item: "Naan",
 		image: Naan,

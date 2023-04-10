@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 import Dialer from "../assets/icons/phone.svg";
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+const Footer = ({ handleToggleOffer }) => {
 	const borderGray = " border-solid border-gray";
 
 	const liStyles =
@@ -11,8 +11,7 @@ const Footer = () => {
 
 	const contact = [
 		{ name: "Pavan", phone: "9494441566" },
-		{ name: "Vijay", phone: "8919575212" },
-		{ name: "Unknown", phone: "6305532326" },
+		{ name: "Vijay", phone: "8886001015" },
 	];
 	return (
 		<footer id="footer" className={`${borderGray}  border-t`}>
@@ -28,7 +27,7 @@ const Footer = () => {
 							className={`max-w-[25rem] border-t text-base opacity-[0.65] max-md:text-[1.4rem] ${borderGray}`}>
 							NH-42, Ananthapuramu Road <br />
 							Near Nayara Petrol bunk <br />
-							Bathalaplli.
+							Bathalapalli.
 						</p>
 					</div>
 				</div>
@@ -43,6 +42,13 @@ const Footer = () => {
 						<Link to={"/menu"} className={liStyles}>
 							Menu
 						</Link>
+						<li
+							className={liStyles}
+							onClick={() => {
+								handleToggleOffer();
+							}}>
+							Offers
+						</li>
 						{/* <Link className={liStyles}>Catering</Link> */}
 					</ul>
 				</div>

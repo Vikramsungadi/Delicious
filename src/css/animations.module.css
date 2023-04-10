@@ -88,19 +88,17 @@
 /* COLOR BLINK ANIMATION */
 @keyframes blinkAnim {
 	0% {
-		color: var(--secondary);
-		opacity: 0.55;
-		outline: 1px solid var(--secondary);
+		scale: 0.98;
+		opacity: 0.4;
 	}
 	100% {
-		outline: 1px solid var(--secondary);
-		color: var(--secondary);
+		scale: 1;
 		opacity: 1;
 	}
 }
 
 .blinkAnim {
-	animation: blinkAnim 1s ease 2s 4 alternate-reverse;
+	animation: blinkAnim 0.7s ease infinite alternate-reverse;
 }
 
 @keyframes dishAnim {
