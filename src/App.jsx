@@ -28,8 +28,8 @@ function App() {
 	useEffect(() => {
 		setTimeout(() => {
 			handleToggleOffer();
-		}, 2000);
-	}, [isLoading]);
+		}, 2800);
+	}, []);
 
 	if (isLoading) {
 		return (
