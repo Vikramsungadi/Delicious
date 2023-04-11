@@ -131,8 +131,8 @@ export const MENU = [
 			{ id: "7bZcyWn", item: "VEG BIRYANI FAMILY PACK", price: "450.00" },
 			{ id: "8w25CiA", item: "PANEER BIRYANI FAMILY PACK", price: "800.00" },
 			{ id: "KwVGwHb", item: "BONELESS CHICKEN FAMILY PACK", price: "800.00" },
-			{ id: "CHbbULh", item: "MUTTON BIRYANI FAMILY PACK", price: "1000.00" },
-			{ id: "B3yc75e", item: "NATIKODI BIRYANI FAMILY PACK", price: "900.00" },
+			{ id: "CHbbULh", item: "MUTTON BIRYANI FAMILY PACK", price: "1400.00" },
+			{ id: "B3yc75e", item: "NATIKODI BIRYANI FAMILY PACK", price: "1000.00" },
 		],
 	},
 	{
@@ -375,6 +375,7 @@ export const CATEGORIES = [
 	},
 	{
 		category: "Fried rice",
+
 		name: "Fried rice",
 		sub: ["veg fried rice", "nonveg fried rice"],
 		image: Mutton,
