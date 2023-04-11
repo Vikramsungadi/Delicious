@@ -1,5 +1,5 @@
 import React from "react";
-import Dish from "../../assets/hero/dish.png";
+import Dish from "../../assets/Hero2.png";
 import Plain from "../../assets/hero/plain.png";
 import { rotateAnim2, startAnim } from "../../css/animations.module.css";
 import { StyledButton } from "../../css/styled-components/styled-components";
@@ -13,7 +13,7 @@ const Hero = () => {
 					<span className=" text-secondary"> Enjoy with Family</span>
 				</h1>
 				<p className="text-base max-lg:text-[1.4rem]">
-					“We welcome your appetite. Let our food satisfy your stomach.”
+					“We welcome your appetite. Let our food satisfy your stomach.”
 				</p>
 				<Link css={StyledButton} className={`${startAnim} btn`} to={"/menu"}>
 					Menu
@@ -23,7 +23,7 @@ const Hero = () => {
 				<div className="image relative w-full">
 					<img
 						src={Dish}
-						className={`${rotateAnim2} absolute left-1/3 top-[7.5%] aspect-square h-[80%] max-h-fit`}
+						className={`${rotateAnim2} absolute left-1/3  aspect-square h-full max-h-fit`}
 						alt="A plate full of delicious food"
 					/>
 					<img src={Plain} alt="Tasty delicious food in a plate" />

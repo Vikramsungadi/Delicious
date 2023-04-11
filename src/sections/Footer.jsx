@@ -10,8 +10,9 @@ const Footer = ({ handleToggleOffer }) => {
 		"opacity-[0.65] transition-all text-[1.8rem] max-sm:text-base cursor-pointer duration-150 hover:text-secondary hover:opacity-100";
 
 	const contact = [
-		{ name: "Pavan", phone: "9494441566" },
 		{ name: "Vijay", phone: "8886001015" },
+		{ name: "Vijay2", phone: "9966919932" },
+		{ name: "Pavan", phone: "9494441566" },
 	];
 	return (
 		<footer id="footer" className={`${borderGray}  border-t`}>
